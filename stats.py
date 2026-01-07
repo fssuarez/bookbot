@@ -1,3 +1,4 @@
+import sys
 
 def get_book_text(path):
     with open(path) as text:
@@ -13,7 +14,7 @@ def words_number(text):
 
 def letter_count():
     letters_count={}
-    content=get_book_text("./books/frankenstein.txt").lower()
+    content=get_book_text(sys.argv[1]).lower()
     for letter in content:
         if letter not in letters_count:
             letters_count[letter]=1
